@@ -9,7 +9,11 @@ class pokedex {
     }
     mensaje () {
         console.log(this.id, this.nombre, this.tipo);
-        capturado.textContent = `¡Capturaste un ${this.nombre}!`;
+        if (this.tipo.length === 1) {
+            capturado.textContent = `¡Capturaste un ${this.nombre}! Tipo: ${this.tipo[0].type.name}`;
+        } else {
+            capturado.textContent = `¡Capturaste un ${this.nombre}! Tipo: ${this.tipo[0].type.name}, ${this.tipo[1].type.name}`;
+        }
     }
 }
 
